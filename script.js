@@ -12,6 +12,7 @@ function createStickyNote() {
             <span class="delete" onclick="deleteStickyNote('${note.id}')">Delete</span>
         </div>
         <div class="content" contenteditable="true" onclick="hidePlaceholder(this)">Click and type here!</div>
+        <input type="color" class="color-picker" onchange="changeNoteColor('${note.id}', this.value)">
     `;
 
     noteId++;
@@ -79,7 +80,8 @@ function saveNotesToLocalStorage() {
         id: note.id,
         content: note.querySelector(".content").innerText,
         top: note.style.top,
-        left: note.style.left
+        left: note.style.left,
+        color: note.style.backgroundColor // Added color property
     }));
     localStorage.setItem("stickyNotes", JSON.stringify(notesArray));
 }
@@ -98,13 +100,21 @@ function loadNotesFromLocalStorage() {
                     <button class="delete" onclick="deleteStickyNote('${note.id}')" contenteditable="false">Delete</button>
                 </div>
                 <div class="content" contenteditable="true">${note.content}</div>
+                <input type="color" class="color-picker" onchange="changeNoteColor('${note.id}', this.value)" value="${note.color}">
             `;
             newNote.style.top = note.top;
             newNote.style.left = note.left;
+            newNote.style.backgroundColor = note.color; // Set background color
             newNote.addEventListener("mousedown", startDrag);
             container.appendChild(newNote);
         });
     }
+}
+
+function changeNoteColor(noteId, color) {
+    const note = document.getElementById(noteId);
+    note.style.backgroundColor = color;
+    saveNotesToLocalStorage();
 }
 
 window.addEventListener("DOMContentLoaded", loadNotesFromLocalStorage);
