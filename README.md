@@ -30,7 +30,7 @@ The Sticky Note Website features a visually appealing design inspired by real-li
 
 <h4>✹ Link to the Project ✹</h4>
 
-<h5>https://bypedroneres.github.io/Sticky-Note-Website/</h5>
+<h5>https://bypedroneres.github.io/Sticky-Notes/</h5>
 
 <h4>✹ Thanks for your interest! ✹</h4>
 
