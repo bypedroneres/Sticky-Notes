@@ -114,15 +114,32 @@ h1 {
     cursor: pointer;
     font-size: 12px;
     color: #1a1a1a;
-    font-weight: bold;
-    margin-right: 5px;
+    font-weight: 1px;
+    margin-right: 0px;
+    margin-top: 0px;
     transition: color 0.3s ease;
     background-color: transparent;
     border: none;
     padding: 0;
-    
 }
 
-.note .delete:hover {
-    color: #000000;
+.color-picker {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #1a1a1a;
+    border-radius: 50%;
+    padding: 0;
+    appearance: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.color-picker::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+.color-picker::-webkit-color-swatch {
+    border: none;
+    border-radius: 50%;
+    padding: 0;
 }
