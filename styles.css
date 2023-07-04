@@ -1,0 +1,128 @@
+body {
+    background-color: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+}
+
+button {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 15px;
+    padding: 15px 15px;
+    background-color: #1A1A1A;
+    color: #F4F4F4;
+    border: 2px solid #F4F4F4;
+    cursor: pointer;
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 50px;
+}
+
+button:hover {
+    background-color: #F4F4F4;
+    color: #1A1A1A;
+}
+
+h1 {
+    color: #F4F4F4;
+    font-family: "Roboto Mono", monospace;
+    margin-top: 0;
+}
+
+.note {
+    position: absolute;
+    background-color: #F4F4F4;
+    min-width: 200px;
+    max-width: 300px;
+    min-height: 100px;
+    padding: 10px;
+    cursor: move;
+    font-family: "Roboto Mono", monospace;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.note .header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.note .delete {
+    cursor: pointer;
+    font-size: 12px;
+    color: #1a1a1a;
+    font-weight: bold;
+    margin-right: 5px;
+    transition: color 0.3s ease;
+}
+
+.note .delete:hover {
+    color: #000000;
+}
+
+.social-icons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.social-icons-container img {
+    display: block;
+    width: 25px;
+    height: 25px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.container-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.container-buttons button {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 15px;
+    padding: 15px 15px;
+    background-color: #1A1A1A;
+    color: #F4F4F4;
+    border: 2px solid #F4F4F4;
+    cursor: pointer;
+    margin: 0;
+    margin-left: 5px;
+    margin-right: 10px;
+    border-radius: 50px;
+}
+
+.container-buttons button:hover {
+    background-color: #F4F4F4;
+    color: #1A1A1A;
+}
+
+.note .delete {
+    cursor: pointer;
+    font-size: 12px;
+    color: #1a1a1a;
+    font-weight: bold;
+    margin-right: 5px;
+    transition: color 0.3s ease;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    
+}
+
+.note .delete:hover {
+    color: #000000;
+}
