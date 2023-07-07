@@ -1,4 +1,3 @@
-// script.js
 let noteId = 0;
 let occupiedPositions = [];
 
@@ -13,7 +12,8 @@ function createStickyNote() {
         </div>
         <div class="content" contenteditable="true" onclick="hidePlaceholder(this)">Click and type here!</div>
         <input type="color" class="color-picker" onchange="changeNoteColor('${note.id}', this.value)">
-    `;
+    `
+     saveNotesToLocalStorage();
 
     noteId++;
     note.addEventListener("mousedown", startDrag);
@@ -24,6 +24,7 @@ function createStickyNote() {
 function hidePlaceholder(element) {
     if (element.innerText === "Click and type here!") {
         element.innerText = "";
+       saveNotesToLocalStorage();
     }
 }
 
@@ -38,6 +39,7 @@ function startDrag(event) {
 
     document.addEventListener("mousemove", dragNote);
     document.addEventListener("mouseup", stopDrag);
+    saveNotesToLocalStorage();
 
     function dragNote(event) {
         if (event.target.tagName.toLowerCase() === 'input' || event.target.tagName.toLowerCase() === 'textarea') {
@@ -48,6 +50,7 @@ function startDrag(event) {
         const newNoteY = event.clientY - offsetY;
         note.style.left = newNoteX + "px";
         note.style.top = newNoteY + "px";
+        saveNotesToLocalStorage();
     }
 
     function stopDrag() {
@@ -72,6 +75,7 @@ function resetNotes() {
     noteId = 0;
     occupiedPositions = [];
     localStorage.removeItem("stickyNotes");
+    saveNotesToLocalStorage();
 }
 
 function saveNotesToLocalStorage() {
@@ -81,7 +85,7 @@ function saveNotesToLocalStorage() {
         content: note.querySelector(".content").innerText,
         top: note.style.top,
         left: note.style.left,
-        color: note.style.backgroundColor // Added color property
+        color: note.querySelector(".color-picker").value // Retrieve color value from the color picker
     }));
     localStorage.setItem("stickyNotes", JSON.stringify(notesArray));
 }
@@ -118,3 +122,4 @@ function changeNoteColor(noteId, color) {
 }
 
 window.addEventListener("DOMContentLoaded", loadNotesFromLocalStorage);
+
