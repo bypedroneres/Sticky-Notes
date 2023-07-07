@@ -43,6 +43,7 @@ h1 {
     min-width: 200px;
     max-width: 300px;
     min-height: 100px;
+    font-size: 10px;
     padding: 10px;
     cursor: move;
     font-family: "Roboto Mono", monospace;
