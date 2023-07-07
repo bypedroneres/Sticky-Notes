@@ -1,5 +1,6 @@
 <div class="image-container">
-  <img class="CoverImagee" src="GIT HUB COVER.png" alt="Cover">
+  <img class="CoverImagee" src="DEMO.png" alt="Cover">
+  
 </div>
           
 <h3>✺ Sticky Note Website ✺</h3>
@@ -15,6 +16,9 @@ The main objective of the Sticky Note Website is to offer a virtual platform for
 The Sticky Note Website features a visually appealing design inspired by real-life sticky notes. The interface incorporates vibrant colors and textures to create a playful and engaging user experience. The notes are designed to resemble physical sticky notes, complete with draggable functionality for easy repositioning.
 
 <h4>✹ Features ✹</h4>
+
+  <img class="CoverImagee" src="GIT HUB COVER.png" alt="demo">
+
 
 * <b>Create Sticky Notes:</b> Users can create new sticky notes by simply clicking on a "New Note" button. Each note can contain text, allowing users to jot down reminders, ideas, or any other information.
 * <b>Color Picker:<b> Users can change the color background of any note, just clicking on the color picker below the notes.
