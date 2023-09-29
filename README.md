@@ -17,7 +17,7 @@ The Sticky Note Website features a visually appealing design inspired by real-li
 
 <h4>✹ Features ✹</h4>
 
-  <img class="CoverImagee" src="GIT HUB COVER.png" alt="demo">
+  <img class="CoverImagee" src="assets/GIT HUB COVER.png" alt="demo">
 
 
 * <b>Create Sticky Notes:</b> Users can create new sticky notes by simply clicking on a "New Note" button. Each note can contain text, allowing users to jot down reminders, ideas, or any other information.
