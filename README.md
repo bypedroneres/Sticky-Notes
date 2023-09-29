@@ -1,5 +1,5 @@
 <div class="image-container">
-  <img class="CoverImagee" src="DEMO.png" alt="Cover">
+  <img class="CoverImagee" src="assets/DEMO.png" alt="Cover">
   
 </div>
           
